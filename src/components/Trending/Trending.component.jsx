@@ -7,7 +7,7 @@ const Trending = () => {
 
   const trendingMovies = async () => {
     const res = await fetch(
-      'https://api.themoviedb.org/3/trending/movie/day?api_key=be7dc9888ec71d3b097464b106250c78'
+      'https://api.themoviedb.org/3/trending/movie/week?api_key=be7dc9888ec71d3b097464b106250c78'
     );
     const films = await res.json();
     console.log(films);
@@ -23,7 +23,7 @@ const Trending = () => {
       <Title title={'Trending'} />
       <div className='movie-card grid grid-cols-trending overflow-scroll'>
         {movies.map(movie => (
-          <Movie key={movie.id} movie={movie} title={'Trending'} />
+          <Movie key={movie.id} movie={movie} />
         ))}
       </div>
     </div>

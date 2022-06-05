@@ -4,6 +4,7 @@ function Movie({ movie }) {
   return (
     <div className='movie px-4'>
       <img
+        className='rounded-lg'
         src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
         alt={movie.original_title}
       />
