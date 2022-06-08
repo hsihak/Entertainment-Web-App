@@ -3,7 +3,7 @@ import React from 'react';
 const Title = ({ title }) => {
   return (
     <>
-      <h2 className='text-pure-white px-4 text-xl'>{title}</h2>
+      <h2 className='text-pure-white text-xl p-6'>{title}</h2>
     </>
   );
 };

@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import Movie from '../Trending/Movie';
-import Title from '../Title/Title.component';
+import Movie from '../../../components/Movie/DefaultMovie.component';
+import Title from '../../../components/Title/Title.component';
 
 const Recommended = () => {
   const [movies, setMovies] = useState([]);
 
   const recommendedMovies = async () => {
     const res = await fetch(
-      'https://api.themoviedb.org/3/movie/top_rated?api_key=be7dc9888ec71d3b097464b106250c78&language=en-US&page=1'
+      'https://api.themoviedb.org/3/movie/top_rated?api_key=be7dc9888ec71d3b097464b106250c78&language=en-US&page=4'
     );
     const films = await res.json();
-    console.log(films);
     setMovies(films.results);
   };
 
