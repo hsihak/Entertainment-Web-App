@@ -77,7 +77,7 @@ function Home() {
             results={searchResults}
             title={'Search'}
             styles={
-              'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-7 overflow-scroll overflow-y-hidden gap-2'
+              'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-7 overflow-scroll overflow-y-hidden gap-2'
             }
           />
         )}
@@ -114,7 +114,9 @@ function Home() {
           <Cards
             results={nowPlayingResults}
             title={'Now Playing'}
-            styles={'grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-7'}
+            styles={
+              'grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-7'
+            }
           />
         )}
       </div>

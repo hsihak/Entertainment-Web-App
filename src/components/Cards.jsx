@@ -13,7 +13,7 @@ function Cards(props) {
   const imagePath = 'https://image.tmdb.org/t/p/w500/';
 
   return (
-    <div className='mx-4 cards'>
+    <div className='grid justify-center mx-4 cards'>
       <h1 className='pb-4 text-2xl text-white'>{title}</h1>
       <div className={styles}>
         {results.map(item => {
