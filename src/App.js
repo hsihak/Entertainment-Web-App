@@ -6,7 +6,7 @@ import Bookmark from './pages/Bookmark';
 
 function App() {
   return (
-    <div className='min-h-fit App bg-dark-blue'>
+    <div className='min-h-screen m App bg-dark-blue'>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/movie' element={<Movie />} />

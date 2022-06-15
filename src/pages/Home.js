@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Cards from '../components/Cards';
 import axios from 'axios';
 import { default as SearchIcon } from '../assets/icons/icon-search.svg';
+import Carousel from 'carousel-react-rcdev';
 
 function Home() {
   const [isLoading, setIsLoading] = useState(false);
@@ -75,9 +76,9 @@ function Home() {
         ) : (
           <Cards
             results={searchResults}
-            title={'Search'}
+            title={`Found ${searchResults.length} results for ${searchData}`}
             styles={
-              'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-7 overflow-scroll overflow-y-hidden gap-2'
+              'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-7 overflow-scroll overflow-y-hidden gap-2 overflow-x-hidden overflow-y-hidden'
             }
           />
         )}
@@ -100,13 +101,15 @@ function Home() {
         {isLoading ? (
           <h1 className='text-white'>Loading...</h1>
         ) : (
-          <Cards
-            results={trendingResults}
-            title={'Trending'}
-            styles={
-              'grid grid-cols-trending overflow-scroll overflow-y-hidden gap-2'
-            }
-          />
+          <Carousel>
+            <Cards
+              results={trendingResults}
+              title={'Trending'}
+              styles={
+                'grid grid-cols-trending overflow-scroll items-center overflow-x-hidden overflow-y-hidden mb-4'
+              }
+            />
+          </Carousel>
         )}
         {isLoading ? (
           <h1 className='text-white'>Loading...</h1>
@@ -115,7 +118,7 @@ function Home() {
             results={nowPlayingResults}
             title={'Now Playing'}
             styles={
-              'grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-7'
+              'grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-7 justify-center items-center overflow-none'
             }
           />
         )}

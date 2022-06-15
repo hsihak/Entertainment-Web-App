@@ -10,7 +10,7 @@ module.exports = {
         'light-orange': '#FC4747',
       },
       gridTemplateColumns: {
-        trending: 'repeat(20, 300px)',
+        trending: 'repeat(20, 260px)',
       },
       fontFamily: {
         outfit: ['Outfit', 'sans-serif'],
